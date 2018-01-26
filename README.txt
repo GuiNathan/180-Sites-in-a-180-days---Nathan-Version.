@@ -1,0 +1,2 @@
+That's a big project that consists in making a site a day until 180 days, during this time a lot of knowledge will be added to my consciousness.
+It's a big step for my walk in the road to the web masters and i hope i can reach higher levels every day.

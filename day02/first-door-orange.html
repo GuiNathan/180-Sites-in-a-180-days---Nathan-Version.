@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choose a door</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="eraseOrangeDoor()">
+
+	<div class="greetings">
+		<h3>You chose the orange door</h3>
+		<p>Are you sure of your choice ? Don't you wanna change doors ?
+		</br>This is your last chance...</p>
+	</div>
+
+	<div class="div-img" id="imgs">
+		<a href="#"><img class="door" id="orange" src="images/orange_door_fire.png" alt=""></a>
+		<a href="#"><img class="door" id="blue" src="images/blue_door.png" alt="" onclick="badThing()"></a>
+		<a href="#"><img class="door" id="green" src="images/green_door.png" alt="" onclick="goodThing()"></a>
+	</div>
+</body>
+</html>

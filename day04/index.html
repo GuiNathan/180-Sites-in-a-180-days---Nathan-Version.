@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mondrian</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" href="script.js">
+
+		vid="";
+		var color;
+
+		function applyColor(){
+			document.getElementById(vid).style.backgroundColor = color;
+		}
+
+		function paintRed(){
+			var elem = document.getElementById("red");
+			color = window.getComputedStyle(elem, null).getPropertyValue("background-color");
+		}
+
+		function paintBlue(){
+			var elem = document.getElementById("blue");
+			color = window.getComputedStyle(elem, null).getPropertyValue("background-color");
+		}
+		
+		function paintYellow(){
+			var elem = document.getElementById("yellow");
+			color = window.getComputedStyle(elem, null).getPropertyValue("background-color");
+		}
+
+		function paintWhite(){
+			var elem = document.getElementById("white");
+			color = window.getComputedStyle(elem, null).getPropertyValue("background-color");
+		}
+
+		
+		
+	</script>
+</head>
+<body>
+	<div id="titulo">Choose a color and paint the Mondrian</div>
+	
+	<div id="mondrian">
+
+		<div class="div-color">
+			<div class="color" id="red" onclick="paintRed()"></div>
+			<div class="color" id="blue" onclick="paintBlue()"></div>
+			<div class="color" id="yellow" onclick="paintYellow()"></div>
+			<div class="color" id="white" onclick="paintWhite()"></div>
+		</div>
+
+		<div class="container" onclick="">
+			<div class="row" id="row-1">
+				<div class="square big01" id="b1" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big02" id="b2" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big03" id="b3" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big04" id="b4" onclick="vid = this.id; applyColor()"></div>
+			</div>
+	
+			<div class="row" id="row-2">
+				<div class="square big05" id="b5" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big06" id="b6" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big07" id="b7" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big08" id="b8" onclick="vid = this.id; applyColor()"></div>
+			</div>
+	
+			<div class="row" id="row-3">
+				<div class="square big09" id="b9" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big010" id="b10" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big011" id="b11" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big012" id="b12" onclick="vid = this.id; applyColor()"></div>
+			</div>
+	
+			<div class="row" id="row-4">
+				<div class="square big013" id="b13" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big014" id="b14" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big015" id="b15" onclick="vid = this.id; applyColor()"></div>
+				<div class="square big016" id="b16" onclick="vid = this.id; applyColor()"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
