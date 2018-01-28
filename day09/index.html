@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bouncing Ball</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="../jquery.js"></script>
+
+	<script type="text/javascript">
+
+		var count = 0;
+		var ball_vel=1000;
+		
+		function animDown(){
+			$(".ball").animate({top:"317px"}, ball_vel, "swing", animUp);
+		}
+
+		function animUp(){
+			$(".ball").animate({top:"-100px"}, ball_vel, "swing", animDown);
+		}
+
+		$(document).ready(function(){
+
+			animDown();
+
+			setInterval(function(){ 
+				if(count==10){
+					$(".ball-msg p, .ball-msg h2").show();
+				}else{
+					$(".ball").show();
+					$(".ball-msg p, .ball-msg h2").hide();	
+				}
+				
+			}, 3000);
+
+			$(".ball").on("click", function(){
+				ball_vel *= 0.8; //moviment speed of ball decreases according to the right clicks
+				$(this).css("display", "none");
+				$(".ball-msg h2").show();
+				$(".ball-msg p").show();
+				count++;
+
+				$(".ball-msg p").html("Próximo nível " + "\"" + (count+1) + "\"");
+
+				if(count==1){
+					$(".ball-msg h2").html("Parabains!!");	
+				}
+				else if(count==2)
+					$(".ball-msg h2").html("Está indo bem ;P");
+				else if(count==3)
+					$(".ball-msg h2").html("Bem jogado!");
+				else if(count==4)
+					$(".ball-msg h2").html("Incrível!");
+				else if(count==5)
+					$(".ball-msg h2").html("Cara, você é bom!!");
+				else if(count==6)
+					$(".ball-msg h2").html("Sensacional!");
+				else if(count==7)
+					$(".ball-msg h2").html("O próximo é bem difícil hehe!!");
+				else if(count==8)
+					$(".ball-msg h2").html("Ta pegando fogo Bichuu!!");
+				else if(count==9)
+					$(".ball-msg h2").html("Daqui você não passa!!");
+				else if(count==10){
+					$(".ball-msg h2").html("Você é o Cara!!");
+					$(".ball-msg p").html("Você venceu o jogo, meus parabéns!!");
+					$(".ball").detach();					
+				}	
+
+			});
+
+
+		});
+
+	</script>
+</head>
+<body>
+	<div class="explain">
+		<h1>Pegue a bola enquanto ela pinga!</h1>
+		<p>Clique na bola para avançar para o próximo nível</p>
+	</div>
+	<div class="container">
+		<div class="ball"></div>
+		<div class="ball-msg">
+			<h2></h2>
+			<p></p>
+		</div>
+		<div class="bottom-menu">
+			<a href="../day01/Homepage.html">Home</a>
+			<a href="#">Portfólio</a>
+		</div>
+	</div>
+</body>
+</html>
