@@ -1,0 +1,14 @@
+
+
+#clock{
+	display: block;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-30%);
+	font-size: 65px;
+	border:2px solid white;
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+}
